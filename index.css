@@ -142,6 +142,8 @@ body {
 }
 
 .attribution { 
+    position: fixed;
+    bottom: 1em;
     font-size: 11px; 
     text-align: center; 
     color: var(--Very-dark-blue-line);
