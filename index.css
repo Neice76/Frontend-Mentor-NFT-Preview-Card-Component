@@ -1,0 +1,157 @@
+:root {
+    /* Primary */
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan:  hsl(178, 100%, 50%);
+
+    /* Neutral */
+    --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+    --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+@font-face {
+    font-family: Outfit;
+    src: url('./fonts/Outfit-Regular.ttf');
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: var(--Very-dark-blue-main-BG);
+}
+
+.nftComponent {
+    display: flex;
+    font-family: Outfit, sans-serif;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--Very-dark-blue-card-BG);
+    color: var(--soft-blue);
+    padding: 0.5rem;
+    width: 265px;
+    border-radius: 10px;
+}
+
+.nftComponent > .nftImage > img {
+    padding: 5px;
+    height: 240px;
+    width: 240px;
+    margin: 0px 30px 0px 10px;
+    border-radius: 10px;
+}
+
+.hoverBackground {
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    display: flex;
+    margin: -250px 30px 0px 15px;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    background-color: hsla(178, 100%, 50%, 0.5);
+    border-radius: 8px;
+}
+
+.nftComponent > .nftImage > .hoverIcon {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin: -150px 105px 0px 105px;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nftComponent > .nftImage:hover > .hoverBackground{
+    opacity: 0.5;
+}
+
+.nftComponent > .nftImage:hover > .hoverIcon{
+    opacity: 1;
+}
+
+.nftComponent > .nftDescription {
+    padding: 15px;
+}
+
+.nftComponent > .nftDescription > .nftTitle {
+    color: var(--White);
+}
+
+.nftComponent > .nftDescription > .nftTitle:hover {
+    color: var(--cyan);
+}
+
+.nftComponent > .nftDescription > .nft-price-date {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nftComponent > .nftDescription > .nft-price-date > .nft-price {
+    color: var(--cyan);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nftComponent > .nftDescription > .nft-price-date > .nft-date {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.line {
+    border-top: 1px solid var(--Very-dark-blue-line);
+    margin: 0.3em 0px;
+}
+
+.user-information {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.user-information > img {
+    height: 35px;
+    width: 35px;
+    margin-right: 5px;
+    border: 1px solid var(--White);
+    border-radius: 50%;
+}
+
+.nftComponent > .user-information {
+    display: flex;
+}
+
+.user-information > .creation-text {
+    color: var(--soft-blue);
+}
+
+.user-information > .creation-text > span {
+    color: var(--White);
+}
+
+.user-information > .creation-text > span:hover {
+    color: var(--cyan);
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    color: var(--Very-dark-blue-line);
+}
+
+.attribution a { 
+    color: var(--White); 
+    text-decoration: none; 
+}
+
+.attribution a:hover {
+    text-decoration: underline;
+}
